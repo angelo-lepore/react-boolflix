@@ -9,8 +9,9 @@ import "./index.css";
 // Import hook useState da React
 import { useState } from "react";
 
-// Import funzione per mostrare bandiera lingua
+// Import funzione per mostrare bandiera lingua e stelle
 import getFlagEmoji from "./components/getFlagEmoji";
+import renderStars from "./components/renderStars";
 
 // Componente principale dell'applicazione
 function App() {
@@ -145,7 +146,7 @@ function App() {
                         <strong>Lingua:</strong> {movie.original_language}{" "}
                         {getFlagEmoji(movie.original_language)}
                         <br />
-                        <strong>Voto:</strong> {movie.vote_average}
+                        <strong>Voto:</strong> {renderStars(movie.vote_average)}
                       </p>
                     </div>
                   </div>
